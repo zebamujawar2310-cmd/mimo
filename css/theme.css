@@ -1,0 +1,108 @@
+/* ==========================================================================
+   theme.css — Centralized design tokens
+   Brand: burnt orange / deep saffron  ·  Ivory  ·  Deep charcoal  ·  Gold
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* ---------- Brand ramp: saffron / burnt orange ---------- */
+  --saffron-50:  #FDF7F1;
+  --saffron-100: #FAEBD9;
+  --saffron-200: #F4D6B4;
+  --saffron-300: #E9B884;
+  --saffron-400: #DD9A55;
+  --saffron-500: #C86A1F;   /* PRIMARY */
+  --saffron-600: #B05617;   /* deep saffron */
+  --saffron-700: #8E4514;
+  --saffron-800: #6B3410;
+  --saffron-900: #4C250B;
+
+  /* ---------- Neutrals ---------- */
+  --ivory:      #FDFBF7;   /* warm off-white page background */
+  --beige:      #F4EDE3;   /* soft beige */
+  --beige-200:  #EAE0D2;
+  --white:      #FFFFFF;
+
+  --charcoal-900: #1B1917; /* deep charcoal — headings */
+  --charcoal-800: #2A2724;
+  --charcoal-700: #3D3934;
+  --charcoal-600: #5C554D; /* body */
+  --charcoal-500: #7A7269;
+  --charcoal-400: #9C948A;
+
+  /* ---------- Subtle gold accent ---------- */
+  --gold:       #B08D57;
+  --gold-light: #D9BE8A;
+
+  /* ---------- Semantic ---------- */
+  --bg:           var(--ivory);
+  --surface:      var(--white);
+  --surface-alt:  var(--beige);
+  --border:       rgba(27, 25, 23, 0.10);
+  --border-strong:rgba(27, 25, 23, 0.18);
+  --text:         var(--charcoal-900);
+  --text-muted:   var(--charcoal-600);
+  --text-soft:    var(--charcoal-500);
+  --brand:        var(--saffron-500);
+  --brand-strong: var(--saffron-600);
+  --brand-soft:   var(--saffron-50);
+  --on-brand:     #FFF8F1;
+  --focus-ring:   rgba(200, 106, 31, 0.38);
+  --error:        #A32C1C;
+  --error-soft:   #FBEDEA;
+  --success:      #2F6B4F;
+  --success-soft: #EDF5F0;
+
+  /* ---------- Typography ---------- */
+  --font-display: "Cormorant Garamond", "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --fs-display: clamp(2.5rem, 1.55rem + 4.2vw, 4.5rem);
+  --fs-h2:      clamp(1.9rem, 1.35rem + 2.4vw, 3rem);
+  --fs-h3:      clamp(1.2rem, 1.08rem + 0.5vw, 1.45rem);
+  --fs-lead:    clamp(1.02rem, 0.97rem + 0.35vw, 1.18rem);
+  --fs-body:    1rem;
+  --fs-sm:      0.9375rem;
+  --fs-xs:      0.8125rem;
+
+  --lh-tight: 1.12;
+  --lh-snug:  1.32;
+  --lh-body:  1.72;
+
+  /* ---------- Spacing ---------- */
+  --sp-1: 0.25rem;  --sp-2: 0.5rem;   --sp-3: 0.75rem;  --sp-4: 1rem;
+  --sp-5: 1.5rem;   --sp-6: 2rem;     --sp-7: 2.5rem;   --sp-8: 3rem;
+  --sp-9: 4rem;     --sp-10: 5rem;
+  --section-y: clamp(3.75rem, 2.4rem + 5.6vw, 7rem);
+  --gutter:    clamp(1.15rem, 0.75rem + 2vw, 2.5rem);
+  --container:  1200px;
+  --container-narrow: 780px;
+
+  /* ---------- Radii ---------- */
+  --r-xs: 6px;  --r-sm: 10px; --r-md: 14px;
+  --r-lg: 20px; --r-xl: 28px; --r-pill: 999px;
+
+  /* ---------- Elevation (soft, luxurious) ---------- */
+  --shadow-xs: 0 1px 2px rgba(27, 25, 23, 0.05);
+  --shadow-sm: 0 1px 2px rgba(27, 25, 23, 0.04), 0 6px 16px -8px rgba(27, 25, 23, 0.10);
+  --shadow-md: 0 1px 3px rgba(27, 25, 23, 0.05), 0 16px 36px -18px rgba(27, 25, 23, 0.20);
+  --shadow-lg: 0 2px 6px rgba(27, 25, 23, 0.06), 0 32px 64px -28px rgba(27, 25, 23, 0.28);
+  --shadow-brand: 0 10px 26px -12px rgba(200, 106, 31, 0.55);
+
+  /* ---------- Motion ---------- */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --t-fast: 150ms var(--ease);
+  --t-base: 240ms var(--ease);
+  --t-slow: 520ms var(--ease);
+
+  /* ---------- Layout ---------- */
+  --header-h: 76px;
+
+  /* ---------- Z-index ---------- */
+  --z-header: 100; --z-menu: 110; --z-overlay: 200; --z-modal: 210;
+}
+
+/* ==========================================================================
+   End of theme.css
+   ========================================================================== */

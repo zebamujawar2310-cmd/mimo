@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Your Name Astrology and Numerology">
+  <rect width="64" height="64" rx="14" fill="#1B1917"/>
+  <circle cx="32" cy="32" r="21" fill="none" stroke="#B08D57" stroke-width="1.5" opacity=".65"/>
+  <circle cx="32" cy="32" r="13.5" fill="none" stroke="#C86A1F" stroke-width="1.6"/>
+  <ellipse cx="32" cy="32" rx="6.5" ry="13.5" fill="none" stroke="#C86A1F" stroke-width="1.2" opacity=".75"/>
+  <path d="M11 32h42" stroke="#B08D57" stroke-width="1.2" opacity=".5"/>
+  <circle cx="32" cy="32" r="3.2" fill="#E9B884"/>
+  <circle cx="32" cy="10.5" r="2" fill="#D9BE8A"/>
+  <circle cx="51" cy="41" r="1.7" fill="#D9BE8A"/>
+  <circle cx="13" cy="41" r="1.7" fill="#D9BE8A"/>
+</svg>

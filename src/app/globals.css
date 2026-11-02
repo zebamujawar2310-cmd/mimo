@@ -1,0 +1,290 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Playfair Display", "Georgia", "Times New Roman", Times, serif;
+
+  /* Luxury palette — light mode (RGB values for Tailwind opacity utilities) */
+  --color-background: 250 250 247;
+  --color-foreground: 28 25 23;
+  --color-card: 255 255 255;
+  --color-card-foreground: 28 25 23;
+  --color-popover: 255 255 255;
+  --color-popover-foreground: 28 25 23;
+  --color-primary: 23 23 23;
+  --color-primary-foreground: 250 250 247;
+  --color-secondary: 243 243 236;
+  --color-secondary-foreground: 28 25 23;
+  --color-muted: 243 243 236;
+  --color-muted-foreground: 122 116 104;
+  --color-accent: 212 175 55;
+  --color-accent-foreground: 28 25 23;
+  --color-destructive: 185 28 28;
+  --color-destructive-foreground: 250 250 247;
+  --color-border: 228 226 217;
+  --color-input: 228 226 217;
+  --color-ring: 212 175 55;
+
+  --radius: 0.875rem;
+
+  /* Charcoal scale */
+  --color-charcoal-950: 10 10 10;
+  --color-charcoal-900: 15 15 15;
+  --color-charcoal-800: 23 23 23;
+  --color-charcoal-700: 34 34 34;
+  --color-charcoal-600: 51 51 51;
+  --color-charcoal-500: 82 82 82;
+
+  /* Gold scale */
+  --color-gold-50: 253 250 240;
+  --color-gold-100: 246 236 184;
+  --color-gold-200: 233 217 140;
+  --color-gold-400: 212 175 55;
+  --color-gold-500: 184 147 47;
+  --color-gold-600: 140 115 35;
+
+  /* Neutral scale */
+  --color-neutral-50: 250 250 247;
+  --color-neutral-100: 243 243 236;
+  --color-neutral-200: 228 226 217;
+  --color-neutral-800: 58 52 48;
+  --color-neutral-900: 38 36 32;
+}
+
+[data-theme="dark"] {
+  --color-background: 10 10 10;
+  --color-foreground: 245 245 240;
+  --color-card: 17 17 17;
+  --color-card-foreground: 245 245 240;
+  --color-popover: 17 17 17;
+  --color-popover-foreground: 245 245 240;
+  --color-primary: 212 175 55;
+  --color-primary-foreground: 10 10 10;
+  --color-secondary: 26 26 26;
+  --color-secondary-foreground: 245 245 240;
+  --color-muted: 23 23 23;
+  --color-muted-foreground: 168 162 146;
+  --color-accent: 212 175 55;
+  --color-accent-foreground: 10 10 10;
+  --color-destructive: 239 68 68;
+  --color-destructive-foreground: 250 250 247;
+  --color-border: 38 38 38;
+  --color-input: 38 38 38;
+  --color-ring: 212 175 55;
+
+  --color-charcoal-950: 6 6 6;
+  --color-charcoal-900: 10 10 10;
+  --color-charcoal-800: 17 17 17;
+  --color-charcoal-700: 26 26 26;
+  --color-charcoal-600: 45 45 45;
+  --color-charcoal-500: 95 95 95;
+
+  --color-gold-400: 212 175 55;
+  --color-gold-500: 196 164 61;
+  --color-gold-600: 158 129 42;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  ::selection {
+    background-color: rgb(var(--color-accent));
+    color: rgb(var(--color-accent-foreground));
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-serif {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+  }
+
+  .luxury-gold {
+    background: linear-gradient(135deg, rgb(var(--color-gold-400)) 0%, rgb(var(--color-gold-500)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gold {
+    border-color: rgb(var(--color-gold-400));
+  }
+
+  .bg-gold {
+    background-color: rgb(var(--color-gold-400));
+  }
+
+  .text-gold {
+    color: rgb(var(--color-gold-400));
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+  }
+
+  .fade-up {
+    animation: fade-up 0.7s ease-out both;
+  }
+
+  .dialog-overlay-anim {
+    animation: fade-in 0.2s ease-out both;
+  }
+
+  .dialog-content-anim {
+    animation: dialog-in 0.25s ease-out both;
+  }
+
+  .accordion-panel-anim {
+    animation: accordion-down 0.25s ease-out both;
+  }
+
+  .fade-in {
+    animation: fade-in 0.5s ease-out both;
+  }
+
+  .slide-in {
+    animation: slide-in 0.4s ease-out both;
+  }
+
+  .pulse-gold {
+    animation: pulse-gold 2s infinite;
+  }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slide-in {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes dialog-in {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes accordion-down {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-gold {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes hero-drift {
+  from { transform: scale(1.04) translateX(0); }
+  to { transform: scale(1.1) translateX(-0.7%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+  }
+
+  .fade-up {
+    animation: fade-up 0.7s ease-out both;
+  }
+
+  .dialog-overlay-anim {
+    animation: fade-in 0.2s ease-out both;
+  }
+
+  .dialog-content-anim {
+    animation: dialog-in 0.25s ease-out both;
+  }
+
+  .accordion-panel-anim {
+    animation: accordion-down 0.25s ease-out both;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
