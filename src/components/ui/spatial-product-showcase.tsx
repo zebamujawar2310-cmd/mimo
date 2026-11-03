@@ -168,7 +168,7 @@ export function SpatialProductShowcase() {
                 <span className="text-[10px] uppercase tracking-[.22em] text-white/45">Product close-up</span>
                 <span className="rounded-full border border-[#d5b878]/40 px-3 py-1 text-[9px] uppercase tracking-[.16em] text-[#e4cf9e]">Metal build</span>
               </div>
-              <div className="relative overflow-hidden rounded-xl bg-[#d9d5c9]">
+              <div id="showcase-video" className="relative overflow-hidden rounded-xl bg-[#d9d5c9]">
                 <video
                   className="aspect-[4/3] w-full object-cover"
                   controls
