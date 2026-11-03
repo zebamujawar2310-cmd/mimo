@@ -117,10 +117,10 @@ export function SpatialProductShowcase() {
     <main className="min-h-screen overflow-hidden bg-[#f7f6f2] text-[#1c1c19]">
       <header className="border-b border-black/10 bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
-          <a href="/" className="text-sm font-black uppercase tracking-[0.2em]">
+          <a href="https://trimmerboss.shop" className="text-sm font-black uppercase tracking-[0.2em]">
             Trimmer <span className="text-[#a17b35]">Boss</span>
           </a>
-          <a href="/" className="text-xs text-black/55 transition hover:text-black">
+          <a href="https://trimmerboss.shop" className="text-xs text-black/55 transition hover:text-black">
             Back to home
           </a>
         </div>
@@ -199,7 +199,7 @@ export function SpatialProductShowcase() {
         </div>
 
         <div className="mt-12 overflow-hidden rounded-[1.75rem] border border-black/10 bg-white shadow-[0_24px_80px_rgba(20,20,16,.08)]">
-          <div className="flex flex-col border-b border-black/10 sm:flex-row">
+          <div role="tablist" aria-label="Product comparison" className="flex flex-col border-b border-black/10 sm:flex-row">
             <button
               type="button"
               role="tab"
