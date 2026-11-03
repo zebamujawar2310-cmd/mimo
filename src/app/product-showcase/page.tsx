@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { SpatialProductShowcase } from "@/components/ui/spatial-product-showcase";
+import { SiteProvider } from "@/components/site/site-provider";
+import { OrderModal } from "@/components/site/order-modal";
+import { TrackModal } from "@/components/site/track-modal";
 
 export const metadata: Metadata = {
   title: "Trimmer Boss Product Showcase",
@@ -8,5 +11,11 @@ export const metadata: Metadata = {
 };
 
 export default function ProductShowcasePage() {
-  return <SpatialProductShowcase />;
+  return (
+    <SiteProvider>
+      <SpatialProductShowcase />
+      <OrderModal />
+      <TrackModal />
+    </SiteProvider>
+  );
 }
